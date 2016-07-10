@@ -1,0 +1,120 @@
+body, button{
+  font-family: 'Latos', sans-serif;
+}
+
+#cssmenu{
+  margin-top: -50px;
+}
+.controls{
+  padding: 2%;
+  background: transparent;
+  color: #eee;
+}
+
+label{
+  font-weight: 300;
+  margin: 0 .4em 0 0;
+}
+
+button{
+  margin: 0;
+  text-transform: uppercase;
+  padding: 10px 10px;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+  cursor: pointer;
+  text-decoration: none;
+  text-shadow: 0 1px 0px rgba(0,0,0,0.15);
+  border-style: solid;
+  border-color: white;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  zoom: 1;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  -moz-box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+  box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+}
+
+button:hover{
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
+button.active{
+  background: #aaec43;
+  color: #000000;
+  font-weight: bold;
+  border-color: #aaec43;
+}
+
+button:focus{
+  outline: 0 none;
+}
+
+button + label{
+  margin-left: 1em;
+}
+
+.container{
+  padding: 2% 2% 0;
+  text-align: justify;
+  font-size: 0.1px;
+  background: transparent;
+  
+  -webkit-backface-visibility: hidden;
+}
+
+.container:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+
+.container .mix,
+.container .gap{
+  display: inline-block;
+  width: 98%;
+}
+
+.container .mix{
+  text-align: left;
+  background: #F0F0F0;
+  margin-bottom: 2%;
+  display: none;
+}
+
+.container .mix.category-1{
+  border-top: 2px solid #aaec43;
+}
+
+.container .mix.category-2{
+  border-top: 2px solid yellow;
+}
+
+.container .mix:after{
+  content: attr(data-myorder);
+  font-size: 16px;
+  display: inline-block;
+  vertical-align: top;
+  padding: 4% 6%;
+  font-weight: 700;
+}
+
+.container .mix:before{
+  content: '';
+  display: inline-block;
+  padding-top: 10%;
+}

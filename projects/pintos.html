@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeremy Hintz</title>
+    <meta name="author" content="Jeremy Hintz">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/individual-project.css">
+    <link rel="stylesheet" href="../css/font.css">
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script src="../scripts/responsive-nav.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+      <header>
+      <a href="" class="logo"></a>
+        <nav class="nav-collapse">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../resume.html">R&Eacute;SUM&Eacute;</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../publications.html">PUBLICATIONS</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h1>Pintos</h1>
+      <h2>An Operating System From the Ground Up</h2>
+
+      <div id="content">
+        <div id="words">
+        <br>
+          <h3>The Assignment</h3>
+          <p>PintOS is a toy operating system developed at Stanford University to teach students about the concepts of threads, user programs, filesystems, virtual memory and more. The project is used in Dr. Norman's CS 439 class, which I took as a student in Fall 2014 and for which I served as a Teaching Assistant in Spring 2015. The projects are notorious at UT and beyond for being extremely time intensive. Unfortunately, I cannot release any of my code for this project because doing so is prohibitted by UT. However, the following is an overview of the projects and the challenges that they present.</p>
+
+          <h3>Threads</h3>
+          <p>The first project is a crash course introduction to PintOS. For many students, PintOS is the largest code base they have worked in to date, so it is necessary to give them a somewhat simpler project to begin with as a means of getting their feet wet. The project asks the students to work with threads which are already built into the OS, but require significant enhancements. For one, we implemented synchronization mechanisms, namely locks, semaphores and monitors. Our OS was then tested by being asked to perform classic synchronization problems such as readers-writers and bounded-buffer.</p>
+
+          <h3>User Programs</h3>
+          <p>The next program asked us to expand the OS to allow I/O, OS interaction, and file system access to user programs by implementing an API for user system calls. This required first setting up a stack to handle argument passing. Next, we had to implement system calls, the most complicated of which were wait(), exec() and write(). All required internal synchronization and interfaces into the existing file system and virtual memory infrastructures.</p>
+
+          <h3>Virtual Memory</h3>
+          <p>The VM project is largely regarded as the most difficult and comprehensive project to complete because of the broad requirements for implementing the VM infrastructure. We had to create a page table and frame table that changed from the existing preloading to instead use demand paging. We then had to choose and implement a page-replacement policy that would work efficiently enough to not trigger timeouts built in to the assignment tests. Next we had to implement stack growth that would allow programs to grow in a sufficiently graceful manner. In doing the above, we also wrote a page fault handler that would facilitate the requirments of demand paging and stay under our given time restrictions.</p>
+
+          <h3>File Systems</h3>
+          <p>The final project in PintOS is the file systems project. We were required to implement extensible files. My group chose to use the FFS file layout, with direct pointers, indirect pointers and doubly indirect pointers. User programs had to be able to grow files up to 8 MB gracefully. Next we had to build a directory structure so that users could layout their file tree as they wished. And as always, internal synchronization was required.</p>
+
+          <h3>As a Teaching Assistant</h3>
+          <p>As I mentioned, I also served as a TA for CS 439 in Spring 2015. One of my main responsibilities was helping students implement the above projects. While the projects were extremely challenging as a student, they were at times even tougher as a TA because of the vast number of possibilities and choices students have for implementing the projects. While I might have implemented a multi-level page table with two levels, for instance, I had to help groups that chose to use single-level or inverted page tables with a clock page replacement algorithm or FIFO, etc. etc. etc. There are so many possibilities that it was impossible to prepare ahead of time for all the things I might have encountered while helping students. What this means is I got very good at quickly examining and debugging code I had never seen. I also developed a very strong understanding of the projects and their concepts as I saw them from a variety of perspectives.</p>
+          <br>
+        </div>
+      </div>
+      <div class="foot">
+        <p style="text-align:center; text-transform:uppercase; opacity:0.5;">Connect with me on:</p>
+        <table>
+          <tr>
+            <td><a target="_blank" href="https://www.facebook.com/jjhintz"><span class="icon-facebook"></span></a></td>
+            <td><a target="_blank" href="https://www.linkedin.com/in/jeremyhintz"><span class="icon-linkedin"></span></a></td>
+            <td><a target="_blank" href="https://github.com/jamoque"><span class="icon-github"></span></a></td>
+            <td><a target="_blank" href="https://twitter.com/jamoque"><span class="icon-twitter"></span></a></td>
+            <td><a target="_blank" href="https://plus.google.com/u/0/116376755231368807969/posts"><span class="icon-googleplus"></span></a></td>
+          </tr>
+        </table>
+      </div>
+
+    <script src="../scripts/fastclick.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/fixed-responsive-nav.js"></script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeremy Hintz</title>
+    <meta name="author" content="Jeremy Hintz">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/individual-project.css">
+    <link rel="stylesheet" href="../css/font.css">
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script src="../scripts/responsive-nav.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+      <header>
+      <a href="" class="logo"></a>
+        <nav class="nav-collapse">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../resume.html">R&Eacute;SUM&Eacute;</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../publications.html">PUBLICATIONS</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h1>RealMassive for iOS</h1>
+
+      <div id="content">
+        <div id="words">
+        <br>
+          <h3>What is RealMassive for iOS?</h3>
+          <p>RealMassive for iOS is an app for the iPhone that allows users to access data from realmassive.com on the go. The app makes calls to RealMassive's 3rd party API and pins the spaces on a map using the Google Maps SDK for iOS. Search all the offices, industrial warehouses, and retail locations for lease in your area, and see detailed space info, turn-by-turn directions, contact info, and more.</p>
+
+          <table class="screenshots">
+          <tr>
+            <td><img src="../images/realmassive-ios/map-view.PNG"></td>
+            <td><img src="../images/realmassive-ios/map-with-search-view.PNG"></td>
+            <td><img src="../images/realmassive-ios/space-table-view.PNG"></td>
+          </tr>
+          <tr>
+            <td><img src="../images/realmassive-ios/space-details-view.PNG"></td>
+            <td><img src="../images/realmassive-ios/messaging-view.PNG"></td>
+            <td><img src="../images/realmassive-ios/notes-view.PNG"></td>
+          </tr>
+        </table>
+
+          <h3>My Role</h3>
+          <p>I worked with one other developer on the app during my summer internship at RealMassive in 2014. I made significant contributions to the way in which data was brought down into the app, how data was accessed throughout the lifecycle of the application, and how users authed using LinkedIn.</p>
+
+          <h3>Some Technical Challenges</h3>
+          <p>Many of the technical challenges I faced during this project were a direct result of the RealMassive API being in its relative infancy. There was no great way to "sip data" from the API, and many desired routes were not in place. I solved the "data sipping" problem using a combination of methods. First of all, I made asynchronous calls to the API's location search in radial rings from the user's current location.</p>
+          <p>Another challenge was using a "log in with LinkedIn" framework, since the most prominent option is not compatible with AFNetworking >2.0. Most of the main functions had to be rewritten to get rid of this dependy.</p>
+          <br>
+        </div>
+      </div>
+      <div class="foot">
+        <p style="text-align:center; text-transform:uppercase; opacity:0.5;">Connect with me on:</p>
+        <table>
+          <tr>
+            <td><a target="_blank" href="https://www.facebook.com/jjhintz"><span class="icon-facebook"></span></a></td>
+            <td><a target="_blank" href="https://www.linkedin.com/in/jeremyhintz"><span class="icon-linkedin"></span></a></td>
+            <td><a target="_blank" href="https://github.com/jamoque"><span class="icon-github"></span></a></td>
+            <td><a target="_blank" href="https://twitter.com/jamoque"><span class="icon-twitter"></span></a></td>
+            <td><a target="_blank" href="https://plus.google.com/u/0/116376755231368807969/posts"><span class="icon-googleplus"></span></a></td>
+          </tr>
+        </table>
+      </div>
+
+    <script src="../scripts/fastclick.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/fixed-responsive-nav.js"></script>
+  </body>
+</html>

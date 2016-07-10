@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeremy Hintz</title>
+    <meta name="author" content="Jeremy Hintz">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/individual-project.css">
+    <link rel="stylesheet" href="../css/font.css">
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script src="../scripts/responsive-nav.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+      <header>
+      <a href="" class="logo"></a>
+        <nav class="nav-collapse">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../resume.html">R&Eacute;SUM&Eacute;</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../publications.html">PUBLICATIONS</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h1>CV Checkers</h1>
+      <h2>Playing Checkers with Computer Vision</h2>
+
+      <div id="content">
+        <div id="words">
+        <br>
+        <h3>Overview</h3>
+        <p>For this project, I created a system that used computer vision to let people play checkers remotely using physical boards and pieces. The system extracted the location of each player’s pieces on their board and sent them to a server. The server would compose the input of multiple players to create a single scene, so that each player sees the same board despite only having half of the physical pieces, as seen below.</p>
+
+        <img id="project-image" src="../images/cvcheckers1.png">
+
+        <h3>Method</h3>
+        <p>This project is written in Python. The structure of the system can be divided into video composition and video streaming over the network. For the video composition, which consists mainly of background subtraction, finding homographies, etc. I used OpenCV’s Python wrapper and NumPy, which makes operating on large, multidimensional arrays and matrices simpler. I also used itertools and collections, two standard Python libraries for easier list iteration.</p>
+
+        <h3>Algorithms</h3>
+        <p>I begin by finding homography between the two player’s boards so that they can be mapped into the same space.  I use the first few frames of the video to establish a background to subtract off and use it to create a mask to isolate the pieces on one player’s board. I then refine the mask by filtering for bright colors to cut down on noise from the board, which is black and white. This limited me to using pieces that are bright colors but allowed me to do a better job with background subtraction. From their I further adjust the mask by using cv2’s contours to find the edges of the pieces. After the other player’s pieces have been subtracted off the board they are composited onto the second player’s board.</p>
+
+        <h3>Other Considerations</h3>
+        <p>One special challnge of this project was using background subtraction to isolate the pieces of one board from the board itself. Most background subtraction solutions are focused around isolating the <i>moving</i> parts of an image, as this is considered to be the foreground. In this case, pieces needed to remain in the foreground after they were placed on the board, and so I could not use motion based background subtraction. The checkerboard pattern, which allowed us to map one board onto the other, made the background subtraction less accurate since we could not easily distinguish the black and white pieces from the black and white tiles.</p>
+        <br>
+        </div>
+      </div>
+      <div class="foot">
+        <p style="text-align:center; text-transform:uppercase; opacity:0.5;">Connect with me on:</p>
+        <table>
+          <tr>
+            <td><a target="_blank" href="https://www.facebook.com/jjhintz"><span class="icon-facebook"></span></a></td>
+            <td><a target="_blank" href="https://www.linkedin.com/in/jeremyhintz"><span class="icon-linkedin"></span></a></td>
+            <td><a target="_blank" href="https://github.com/jamoque"><span class="icon-github"></span></a></td>
+            <td><a target="_blank" href="https://twitter.com/jamoque"><span class="icon-twitter"></span></a></td>
+            <td><a target="_blank" href="https://plus.google.com/u/0/116376755231368807969/posts"><span class="icon-googleplus"></span></a></td>
+          </tr>
+        </table>
+      </div>
+
+    <script src="../scripts/fastclick.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/fixed-responsive-nav.js"></script>
+  </body>
+</html>

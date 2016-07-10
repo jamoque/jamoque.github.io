@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeremy Hintz</title>
+    <meta name="author" content="Jeremy Hintz">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/individual-project.css">
+    <link rel="stylesheet" href="../css/font.css">
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script src="../scripts/responsive-nav.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+      <header>
+      <a href="" class="logo"></a>
+        <nav class="nav-collapse">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../resume.html">R&Eacute;SUM&Eacute;</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../publications.html">PUBLICATIONS</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h1>CRENow&#0153;</h1>
+      <h2>Tweeting Commercial Real Estate Listings to a Massive Audience</h2>
+
+      <div id="content">
+        <div id="words">
+        <br>
+          <h3>What is CRENow?</h3>
+          <p>CRENow is a marketing automation tool used by RealMassive to syndicate commercial real estate data onto Twitter. More specifically, it is a bot that listens to RealMassive's database for updates and keeps that data fresh on Twitter in feed form.</p>
+          <h3>What's the point?</h3>
+          <p>In commercial real estate, information is slow moving. Stale data is a large contributing factor to why many unleased spaces sit idle for much longer than they should. By using Twitter, we were able to spread information in real time to a large audience to generate leads more quickly. And it worked. RealMassive receieves around 60% of its web traffic from Twitter.</p>
+
+          <h3>My Role</h3>
+          <p>This was one of two intern projects I worked on for a large portion of my summer internship in 2014. I worked with the one other intern on CRENow. We had ownership of developing technical specs for the product, coordinating feature sets with the marketing team, developing the bot, and integrating it into the RealMassive web app.</p> 
+          <p>CRENow is built in Python using the Twython Twitter API wrapper library. It is set up as a handler within the RealMassive web app running on Google App Engine.</p>
+
+          <h3>Technical Aspects</h3>
+          <p>The main technical challenge of architecting CRENow was integrating it into the larger umbrella of the RealMassive web app. We were using Google App Engine as our datastore, which comes with a built-in "Edited At" field. However that field was updated everytime someone viewed a space, and there were good reasons to have it work that way for other parts of the site. However for the purposes of our Twitter Bot, that meant we had to find new ways to look for and reflect updates to spaces. Because I had been working on the main web app all summer, I knew that a lot of our data models often got dirty when they were updated, meaning relationships between buildings, spaces, broker and tenant objects were broken due to existing problems with our data model. For this reason, I suggested that we set up a chron job that would both clean up and rebuild those relations and serve as our crawler to search for updates to the data fields we were interested in. That way, whenever the space's price, availability date, or available square footage was updated, our Twitter Bot would find it and also repair existing relations.</p>
+          <p>The flow for the app looked as follows:</p>
+          <img id="project-image" src="../images/crenow/CRENow_diagram.png">
+
+          <h3>Something cool...</h3>
+          <p>CRENow was featured in the Austin Business Journal! Check out the article <a href="http://www.bizjournals.com/austin/blog/techflash/2014/07/austin-real-estate-listing-company-launches.html">here</a>.</p>
+          <br>
+        </div>
+      </div>
+      <div class="foot">
+        <p style="text-align:center; text-transform:uppercase; opacity:0.5;">Connect with me on:</p>
+        <table>
+          <tr>
+            <td><a target="_blank" href="https://www.facebook.com/jjhintz"><span class="icon-facebook"></span></a></td>
+            <td><a target="_blank" href="https://www.linkedin.com/in/jeremyhintz"><span class="icon-linkedin"></span></a></td>
+            <td><a target="_blank" href="https://github.com/jamoque"><span class="icon-github"></span></a></td>
+            <td><a target="_blank" href="https://twitter.com/jamoque"><span class="icon-twitter"></span></a></td>
+            <td><a target="_blank" href="https://plus.google.com/u/0/116376755231368807969/posts"><span class="icon-googleplus"></span></a></td>
+          </tr>
+        </table>
+      </div>
+
+    <script src="../scripts/fastclick.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/fixed-responsive-nav.js"></script>
+  </body>
+</html>

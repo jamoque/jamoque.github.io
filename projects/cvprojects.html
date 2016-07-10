@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Jeremy Hintz</title>
+    <meta name="author" content="Jeremy Hintz">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/individual-project.css">
+    <link rel="stylesheet" href="../css/font.css">
+      <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+      <link rel="stylesheet" href="css/ie.css">
+    <![endif]-->
+    <script src="../scripts/responsive-nav.js"></script>
+    <link href='http://fonts.googleapis.com/css?family=Lato:300' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+
+      <header>
+      <a href="" class="logo"></a>
+        <nav class="nav-collapse">
+          <ul>
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../about.html">ABOUT</a></li>
+            <li><a href="../resume.html">R&Eacute;SUM&Eacute;</a></li>
+            <li><a href="../projects.html">PROJECTS</a></li>
+            <li><a href="../publications.html">PUBLICATIONS</a></li>
+            <li><a href="../contact.html">CONTACT</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h1>Computer Vision Projects</h1>
+      <h2>Projects From Dr. Bryan Klingner's Computer Vision and 3D Reconstruction Class</h2>
+
+      <div id="content">
+        <div id="words">
+        <br>
+          <h3>Class Overview</h3>
+          <p>In this lab-based class, we dove into practical applications of 3D reconstruction, combining hardware and software to build our own 3D environments from scratch. We used open-source framework, OpenCV, to do the heavy lifting, with the focus on understanding and applying state-of-the art approaches to geometric computer vision.</p>
+
+          <h3>Panorama Stitching</h3>
+          <p>For this project, we wrote software to stitch multiple images of a scene together into a panorama automatically.</p>
+          <p>The first step for the panorama stitcher is finding a homography between the two images. To establish a homography between two images, we first needed to find a set of correspondences between them. The way I chose to do this was to identify "interest points" or "key points" in both images, summarize their appearances using descriptors, and then establish matches between these "features" (interest points combined with their descriptors) by choosing features with similar descriptors from each image using the cv2.SIFT interface to compute interest points and descriptors.</p>
+          <p>Once correspondences were established between two images, I used them to find a "best" homography mapping one image into the frame of another using cv2.findHomography, which computes the least-squares-best-fit homography given a set of corresponding points. It also offers robustified computation using RANSAC or the Least-Median methods.</p>
+          <p>Once homographies were found, I warped them according to these homographies in order to composite them together using cv.warpPerspective.</p>
+
+          <h3>Stereo Imaging</h3>
+          <p>In this project, we reconstructed a 3D scene from stereo image pairs.</p>
+          <p>Just like for panorama stitching, the first thing I needed to do was to establish some correspondences between the images in order to compute epipolar geometry from a pair of images. Next, I got the fundamental matrix using cv2.findFundamentalMat(). Next, I rectified the images using cv2.stereoRectifyUncalibrated().</p>
+          <p>With the rectified stereo pair, I then computed disparities between correponding pixels using StereoSGBM. I then used disparity and camera focal length to find depth to get results in 3D. I then converted the disparity images to a PLY point cloud.</p>
+
+          <h3>Object Tracking</h3>
+          <p>In this project, we tracked objects in video sequences using background subtraction, optical flow, sparse feature tracking, and Kalman filtering.</p>
+          <p>We first tracked a ball on a checkered background and then a face moving through a scene without using any ground truth to make the facial tracking easier.</p>
+          <br>
+        </div>
+      </div>
+      <div class="foot">
+        <p style="text-align:center; text-transform:uppercase; opacity:0.5;">Connect with me on:</p>
+        <table>
+          <tr>
+            <td><a target="_blank" href="https://www.facebook.com/jjhintz"><span class="icon-facebook"></span></a></td>
+            <td><a target="_blank" href="https://www.linkedin.com/in/jeremyhintz"><span class="icon-linkedin"></span></a></td>
+            <td><a target="_blank" href="https://github.com/jamoque"><span class="icon-github"></span></a></td>
+            <td><a target="_blank" href="https://twitter.com/jamoque"><span class="icon-twitter"></span></a></td>
+            <td><a target="_blank" href="https://plus.google.com/u/0/116376755231368807969/posts"><span class="icon-googleplus"></span></a></td>
+          </tr>
+        </table>
+      </div>
+
+    <script src="../scripts/fastclick.js"></script>
+    <script src="../scripts/scroll.js"></script>
+    <script src="../scripts/fixed-responsive-nav.js"></script>
+  </body>
+</html>
