@@ -1,0 +1,78 @@
+<section id="sidebar">
+
+	<!-- Intro -->
+
+	{% if page.layout != 'post' %}
+	{% if page.title != 'R&eacute;sum&eacute;' %}
+		<section id="intro">
+			<header>
+				<br>
+				<br>
+				<h2>Jeremy Hintz</h2>
+				<p>Software Engineer | Data Scientist</p>
+				<ul class="icons">
+					<li><a href="https://twitter.com/jamoque" target="_blank" class="fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://www.facebook.com/jjhintz" target="_blank" class="fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://github.com/jamoque" target="_blank" class="fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://www.linkedin.com/in/jeremyhintz" target="_blank" class="fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="mailto:jeremy.hintz@gmail.com?Subject=Hi%20there!" class="fa-envelope"><span class="label">Email</span></a></li>
+				</ul>
+			</header>
+		</section>
+	{% endif %}
+	{% endif %}
+		
+	<!-- Featured Posts -->
+	{% if page.title != 'R&eacute;sum&eacute;' %}
+		<section>
+			<h3>Featured:</h3>
+			<div class="mini-posts">
+				{% for post in site.data.featured.featured %}
+					<article class="mini-post">
+						<header>
+							<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+							<time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
+						</header>
+						{% if post.featureimg %}
+						<a href="{{ post.url | prepend: site.baseurl }}" class="image"><img src="{{ post.featureimg | prepend: site.baseurl }}"></a>
+						{% endif %}
+					</article>
+				{% endfor %}
+			</div>
+		</section>
+	{% endif %}
+
+	{% if page.title == 'R&eacute;sum&eacute;' %}
+		<section>
+			<h3>Projects:</h3>
+			<div class="mini-posts">
+				{% for post in site.data.projects.projects %}
+					<article class="mini-post">
+						<header>
+							<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+							<time class="published" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%d %B, %Y" }}</time>
+						</header>
+						{% if post.featureimg %}
+						<a href="{{ post.url | prepend: site.baseurl }}" class="image"><img src="{{ post.featureimg | prepend: site.baseurl }}"></a>
+						{% endif %}
+					</article>
+				{% endfor %}
+			</div>
+		</section>
+	{% endif %}
+
+	<!-- About -->
+		<section class="blurb">
+			<h2>About Jeremy</h2>
+			<p>Jeremy is a Software Engineer at Uber in Palo Alto, CA focused on deep learning technologies.</p>
+			<ul class="actions">
+				<li><a href="../about/" class="button">Learn More</a></li>
+			</ul>
+		</section>
+
+	<!-- Footer -->
+		<section id="footer">
+			<p class="copyright">&copy; MIT. Design Credit: <a href="http://html5up.net">HTML5 UP</a></p>
+		</section>
+
+</section>

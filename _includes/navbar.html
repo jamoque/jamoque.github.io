@@ -1,0 +1,29 @@
+<header id="header">
+	<h1><a href="{{ site.url | append: site.baseurl }}">Jeremy Hintz</a></h1>
+	<nav class="links">
+		<ul>
+			{% for link in site.data.navbar.navbar_links %}
+			<li><a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</nav>
+	<nav class="main">
+		<ul>
+			<li class="menu">
+				<a class="fa-bars" href="#menu">Menu</a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<!-- Menu -->
+<section id="menu">
+	<!-- Links -->
+	<section>
+		<ul class="links">
+			{% for link in site.data.navbar.navbar_links %}
+			<li><a href="{{ link.url | prepend: site.baseurl }}">{{ link.title }}</a></li>
+			{% endfor %}
+		</ul>
+	</section>
+</section>

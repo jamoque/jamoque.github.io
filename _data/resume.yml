@@ -1,0 +1,49 @@
+employers:
+  - name: UBER
+    title: GRADUATE SOFTWARE ENGINEERING INTERN
+    timerange: May 2016 - Present
+    logo: /img/resume/uber_logo.png
+    url: http://www.uber.com
+    bullets:
+     - Improved average peak-time CPU utilization by 5% and P99.9 latency by 17%
+     - Developed a predictive capacity model for projecting future traffic patterns and subsequent CPU and latency values
+     - Created EMR job to process historical traffic and replay on production servers at magnified levels and with specific patterns
+     - Built tool that assessed current datacenter load and provisioned servers to achieve projected load balance
+  - name: RetailMeNot
+    title: Machine Learning Intern
+    timerange: May 2015 - Nov 2015
+    logo: /img/resume/rmn_logo.png
+    url: http://www.retailmenot.com
+    bullets:
+     - Drove estimated $1.1 million in revenue for Q3 & Q4 through higher click-to-deliver rates and lower lapse rates
+     - Built and trained a logistic regression machine learning model using Python with sklearn to predict user-item affinity
+     - Used output of logistic regression affinity model as input to implicit matrix factorization model for collaborative filtering
+     - Built algorithm in Apache Spark, achieving mean percentile rank of 7% for dataset of 12 million users, 1 thousand items
+  - name: RealMassive
+    title: Software Engineering Intern
+    timerange: May 2014 - Dec 2014
+    logo: /img/resume/realmassive-logo.png
+    url: http://www.retailmenot.com
+    bullets:
+     - Developed iOS application that interacts with RealMassive public API using RestKit, Google Maps SDK, and SendGrid API
+  - name: Samsung Austin Semiconductor
+    title: Software Engineering Intern
+    timerange: May 2013 - Aug 2013
+    logo: /img/resume/sas-logo.jpg
+    url: http://www.samsung.com/global/business/semiconductor/
+    bullets:
+     - Raised overall throughput of target sector by 4%, representing direct cost savings of $640,000 per quarter
+     - Engineered a solution to manufacturing stop-loss by developing new method for isolating outliers in streaming data analysis
+
+education:
+  - name: The University of Texas at Austin
+    degree: M.S.
+    major: Computer Science, Engineering and Math
+    graduationdate: Aug 2015 - Dec 2016
+    logo: /img/resume/ut_logo.jpg
+    url: http://www.utexas.edu
+    description:
+     - Thesis Deep Generative Adversarial Networks
+  - degree: B.S.
+    major: Computer Science
+    graduationdate: Aug 2011 - May 2015

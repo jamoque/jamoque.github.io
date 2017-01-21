@@ -1,0 +1,11 @@
+featured:
+  - title: "Dinosaurs are extinct today"
+    author: Jeremy Hintz
+    url: /bookshelf/dinosaurs/
+    date: 2014-06-10
+    featureimg: /img/pic01.jpg
+  - title: "Test 2"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic02.jpg

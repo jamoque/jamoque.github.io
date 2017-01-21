@@ -1,0 +1,9 @@
+navbar_links:
+  - title: "R&eacute;sum&eacute;"
+    url: /resume/
+  - title: "Projects"
+    url: /projects/
+  - title: "Bookshelf"
+    url: /bookshelf/
+  - title: "Contact"
+    url: /contact/

@@ -1,0 +1,36 @@
+projects:
+  - title: "Project 1"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2014-06-10
+    featureimg: /img/pic01.jpg
+  - title: "Project 2"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic02.jpg
+  - title: "Project 3"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic03.jpg
+  - title: "Project 4"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic04.jpg
+  - title: "Project 5"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic05.jpg
+  - title: "Project 6"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic06.jpg
+  - title: "Project 7"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic07.jpg

@@ -1,0 +1,86 @@
+///
+/// Future Imperfect by HTML5 UP
+/// html5up.net | @n33co
+/// Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+///
+
+/* Main */
+
+    #main {
+        @include vendor('flex-grow', '1');
+        -ms-flex: 1;
+        width: 100%;
+    }
+
+    .myButton {
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+        text-transform: uppercase;
+        padding: 12px 15px;
+        background: #2ebaae;
+        color: #fff !important;
+        font-size: 16px;
+        cursor: pointer;
+        text-decoration: none;
+        text-shadow: 0 1px 0px rgba(0,0,0,0.15);
+        border-style: solid;
+        border-color: white;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -moz-inline-stack;
+        display: inline-block;
+        vertical-align: middle;
+        zoom: 1;
+        text-align: center;
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        -webkit-box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+        -moz-box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+        box-shadow: 0 -1px 0 rgba(255,255,255,0.1) inset;
+    }
+
+    .myButton:hover {
+        background: #007f74;
+        color: #fff !important;
+    }
+
+    #myName {
+        font-size:40px;
+        margin-bottom: 0px;
+    }
+
+    #employerLogo {
+        max-width: 200px;
+        margin-top: 20px;
+    }
+
+    #resumeSubhead {
+        font-size:20px;
+    }
+
+    #resumeBullet {
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+
+    #utLogo {
+        width: 400px;
+        max-width: 100%;
+        margin-top: 20px;
+    }
+
+    #resumeEntry {
+        margin: 20px 0 10px 0;
+    }
+
+    #resumeDescription {
+        font-size: 15px;
+    }

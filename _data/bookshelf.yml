@@ -1,0 +1,36 @@
+books:
+  - title: "Dinosaurs are extinct today"
+    author: Jeremy Hintz
+    url: /bookshelf/dinosaurs/
+    date: 2014-06-10
+    featureimg: /img/pic01.jpg
+  - title: "Book 2"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic02.jpg
+  - title: "Book 3"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic03.jpg
+  - title: "Book 4"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic04.jpg
+  - title: "Book 5"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic05.jpg
+  - title: "Book 6"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic06.jpg
+  - title: "Book 7"
+    author: Jeremy Hintz
+    url: /about/
+    date: 2015-07-11
+    featureimg: /img/pic07.jpg

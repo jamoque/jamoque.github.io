@@ -1,0 +1,26 @@
+# Details
+title:       Jeremy Hintz
+description: Portfolio site, blog, and random stuff from Jeremy Hintz
+url:         http://jjhintz.com
+
+#Author
+author:
+  name:      'Jeremy Hintz'
+
+paginate:    3
+paginate_path: "/:num/"
+
+# Permalinks
+permalink:   /:categories/:title/
+
+# Build settings
+# destination: dest
+markdown:    kramdown
+highlighter: rouge
+
+# Gems
+gems:
+  - jekyll-paginate
+  - jekyll/tagging
+  - jekyll-tagging-related_posts
+  - jekyll-seo-tag

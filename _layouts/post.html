@@ -1,0 +1,16 @@
+---
+layout: default
+---
+<article class="post">
+	<header>
+		<div class="title">
+			<h2>{{ page.title }}</h2>
+			{% if page.description %}
+				<p>{{page.description}}</p>
+			{% endif %}
+			<time class="published" datetime="{{ page.date | date: "%Y-%m-%d" }}">{{ page.date | date: "%B %d, %Y" }}</time>
+		</div>
+	</header>
+	<img src="/img/pic01.jpg" alt="" style="width:100%" />
+	{{ content }}
+</article>
