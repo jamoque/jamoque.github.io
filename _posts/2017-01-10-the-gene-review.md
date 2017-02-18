@@ -3,12 +3,13 @@ layout      : post
 title       : "The Gene: An Intimate History by Siddhartha Mukherjee"
 author      : Jeremy Hintz
 date        : 2017-01-10
+featureimg  : /img/books/the_gene.jpg
 tags        :
 - genetics
 - gene
 - book
 - review
-description : "A book review of *The Gene*"
+description : "Progress in science depends on new techniques, new discoveries, and new ideas, probably in that order"
 categories  :
 - bookshelf
 ---
